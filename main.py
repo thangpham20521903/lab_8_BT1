@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import io
-
+import matplotlib.pyplot as plt
 st.title("Data ")
 
 st.header("Upload data file")
@@ -17,3 +17,9 @@ if data_file is not None:
   buffer = io.StringIO()
   st.write(buf=buffer)
   st.text(buffer.getvalue())
+  st.header("Visualize each atrribute")
+  for col in list(df.columns):
+    fig, ax = plt.subplots()
+    ax.hist(df[col], bins=20)
+    plt.xlabel(col)
+    plt.ylabel()
