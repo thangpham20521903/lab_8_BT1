@@ -12,3 +12,7 @@ if data_file is not None:
   st.dataframe(df)
   st.header('Descriptive statistics')
   st.table(df.describe())
+  st.header('Show data information')
+  buffer = io.StringIO()
+  st.write(df.info())
+  st.text(buffer.getvalue())
