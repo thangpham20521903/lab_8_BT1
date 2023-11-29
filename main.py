@@ -15,5 +15,5 @@ if data_file is not None:
   st.table(df.describe())
   st.header('Show data information')
   buffer = io.StringIO()
-  st.write(df.info())
+  st.write(buf=buffer)
   st.text(buffer.getvalue())
