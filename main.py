@@ -23,4 +23,4 @@ if data_file is not None:
     ax.hist(df[col], bins=20)
     plt.xlabel(col)
     plt.ylabel('Quanity')
-    plt.show()
+    st.pyplot(fig)
