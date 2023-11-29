@@ -44,6 +44,6 @@ if data_file is not None:
   
   st.header('Show correlation between varibles')
   fig, ax = plt.subplots()
-  sns.heatmap(df.corr(method='pearson'), ax=ax, vmax=1, square=True, anot=True, cmap='Reds')
+  sns.heatmap(df.corr(method='pearson'), ax=ax, vmax=1, square=True, anot=True, cmap='Red')
   st.write(fig)
   
